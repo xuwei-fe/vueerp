@@ -1,0 +1,332 @@
+.clearfix {
+	clear: both; 
+	display: block; 
+	zoom: 1; 
+	height: auto; 
+}
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft Yahei';
+	font-size: 14px;
+}
+input, textarea, keygen, select, button {
+	font-family: 'Microsoft Yahei'
+}
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.page-container {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* sidebar menu */
+.page-sidebar {
+	-webkit-transition: all;
+	transition: all;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    background-color: #364150;
+    z-index: 100;
+    overflow-x: hidden;
+}
+.page-sidebar .page-sidebar-collapse {
+	color: #fff;
+	cursor: pointer;
+	height: 36px;
+	background-color: #2b3643;
+	line-height: 36px;
+	text-align: center;
+}
+.page-sidebar .el-menu {
+	background-color: transparent;
+}
+.page-sidebar .el-menu-item {
+	line-height: 40px;
+	height: 40px;
+	color: #b4bcc8;
+	border-bottom: 1px solid #3d4957;
+}
+.page-sidebar .el-menu-item:hover {
+	background-color: rgba(0,24,143,.18);
+}
+.page-sidebar .el-menu-item.is-active {
+	background-color: #1e77a2;
+}
+.page-sidebar .el-menu-item a {
+	color: #b4bcc8;
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+}
+.page-sidebar .el-menu-item.is-active a {
+	color: #fff;
+}
+
+.page-sidebar-mini .page-sidebar .title {
+    visibility: hidden;
+}
+.page-sidebar-mini .page-sidebar {
+    width: 55px;
+}
+.page-sidebar-mini .page-prod {
+    left: 55px;
+}
+.page-sidebar [class^='icon-'] {
+	position: relative;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	background-image: url(../img/icon.png);
+	background-repeat: no-repeat;
+	top: 3px;
+	right: 5px;
+}
+.is-active [class^='icon-'] {
+	background-image: url(../img/icon-white.png);
+}
+.icon-fold {
+	background-position: 0 0;
+	margin-top: 10px;
+}
+.icon-enterprise {
+	background-position: 0 -20px;
+}
+.icon-project {
+	background-position: 0 -40px;
+}
+.icon-employee {
+	background-position: 0 -60px;
+}
+.icon-attendance {
+	background-position: 0 -80px;
+}
+.icon-salary {
+	background-position: 0 -100px;
+}
+.icon-contract {
+	background-position: 0 -120px;
+}
+.icon-audit {
+	background-position: 0 -140px;
+}
+.icon-equipment {
+	background-position: 0 -160px;
+}
+.icon-xingzheng {
+	background-position: 0 -180px;
+}
+.icon-general {
+	background-position: 0 -200px;
+}
+
+/* page prod menu */
+.page-prod {
+	position: absolute;
+	left: 180px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+}
+.prod-sidebar {
+	z-index: 102;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 180px;
+	background-color: #eee;
+	overflow-x: hidden;
+	visibility: hidden;
+
+  -webkit-transition: all;
+       -o-transition: all;
+          transition: all;
+}
+.prod-sidebar .prod-nav-title {
+	color: #2b3643;
+	font-size: 14px;
+	font-weight: bold;
+	height: 70px;
+	line-height: 70px;
+	padding: 0 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+.prod-main {
+    position: absolute;
+    right: 0;
+    top: 0;
+	bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.2s ease 0s;
+    width: auto;
+    padding: 15px;
+}
+.page-prod-mini .prod-sidebar {
+	visibility: visible;
+}
+.page-prod-mini .prod-main {
+	left: 180px;
+}
+.prod-sidebar-collapse {
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	
+	z-index: 109;
+	cursor: pointer;
+
+	width: 16px;
+    height: 80px;
+    background: url(../img/icon-spread.png) no-repeat center;
+}
+.page-prod-mini .prod-sidebar-collapse {
+	left: 164px;
+	background: url(../img/icon-collapse.png) no-repeat center;
+}
+.prod-sidebar .el-menu {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow-y: auto;
+	background-color: transparent;
+}
+.prod-sidebar .el-menu-item {
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+}
+.prod-sidebar .el-menu-item a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+.prod-sidebar .el-menu-item:hover {
+	background-color: #e5e5e5;
+}
+.prod-sidebar .el-menu-item.is-active {
+	background-color: #fff;
+}
+
+/* page content */
+.breadcrumb {
+	border-bottom: 1px solid #ddd;
+	color: #999;
+	font-size: 14px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.portlet-title {
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+/* table toolbar */
+.toolbar {
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #ccd4dd;
+	background: -moz-linear-gradient(top, #fff 0%, #f0f2f7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f7));
+    background: -webkit-linear-gradient(top, #fff 0%,#f0f2f7 100%);
+    background: -o-linear-gradient(top, #fff 0%,#f0f2f7 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#f0f2f7 100%);
+    background: linear-gradient(to bottom, #fff 0%,#f0f2f7 100%);
+	padding: 0 15px;
+}
+.toolbar .el-button {
+	margin-left: 0;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	font-size: 14px;
+	color: #666;
+}
+.toolbar .btn-add:before,
+.toolbar .btn-del:before,
+.toolbar .btn-export:before {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	content: '\20';
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.toolbar .btn-add:before {
+	background-position: 0 0;
+}
+.toolbar .btn-del:before {
+	background-position: -20px 0;
+}
+.toolbar .btn-export:before {
+	background-position: -40px 0;
+}
+.el-button--gray {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+.el-button--gray:hover {
+	background-color: #fff;
+}
+.el-button--primary {
+	background-color: #00acff;
+}
+
+/* el-pagination */
+.el-pagination {
+	padding: 10px 0;
+}
+/* table */
+.el-table {
+	width: 100%;
+}
+
+/* tipbox */
+.tipbox {
+    border-style: solid;
+    border-color: #8bb4e7;
+    border-width: 0 0 0 5px;
+    background-color: #fff;
+    padding: 15px;
+	margin-bottom: 15px;
+}
+.tipbox p {
+	margin: 0;
+}
+.tipbox-primary {
+    border-color: #8bb4e7;
+	background-color: #f5f8fd;
+}
