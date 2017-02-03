@@ -1,17 +1,3 @@
-## 前言
-```
-国庆在回家的路上，得知了vue2发布了正式版，
-国庆回来后，在公司内两个项目便直接应用上了vue2，
-一个是PC端的商户后台，一个是微信端商城，
-都是基于Vue2、vue-router、vuex ......
-在开发的过程中，遇到了一系列的问题，
-比如页面后退数据还原，滚动条还原，
-登录超时，获取列表数据，表单提交，
-多台服务器自动化部署，最终后一个个解决了，
-能够平稳的从react切换到vue2开发，vue的文档功不可没。
-```
-github:[https://github.com/lzxb/vue2-demo](https://github.com/lzxb/vue2-demo)
-
 ## 源码说明
 ### 项目目录说明
 ```
@@ -31,10 +17,11 @@ github:[https://github.com/lzxb/vue2-demo](https://github.com/lzxb/vue2-demo)
 |   |-- less                         // 各种less文件
 |       |-- common.less              // 全局通用less文件
 |   |-- pages                        // 页面组件
-|       |-- home                     // 个人中心
-|       |-- index                    // 网站首页
+|       |-- home                     // 首页
+|       |-- index                    // erp入口
 |       |-- login                    // 登录
-|       |-- signout                  // 退出
+|		|-- project                  // 项目管理
+|       |-- enterprise               // 企业管理
 |   |-- store                        // vuex的状态管理
 |       |-- index.js                 // 加载各种store模块
 |       |-- user.js                  // 用户store
@@ -108,8 +95,3 @@ vuex                                  // 组件状态管理
 npm install
 npm run dev
 http://localhost:3000/app/
-```
-
-## 开发教程
-[1.开发环境搭建](https://github.com/lzxb/vue2-demo/blob/master/docs/1.md)  
-[2.实现登录退出](https://github.com/lzxb/vue2-demo/blob/master/docs/2.md)
